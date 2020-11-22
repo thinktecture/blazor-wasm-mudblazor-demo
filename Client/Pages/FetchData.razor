@@ -36,7 +36,7 @@
 
     protected override async Task OnInitializedAsync()
     {
-        _forecasts = (await Http.GetFromJsonAsync<WeatherForecast[]>("WeatherForecast")).ToList();
+        _forecasts = (await _http.GetFromJsonAsync<WeatherForecast[]>("WeatherForecast")).ToList();
     }
 
     bool FilterFunc(WeatherForecast element)
