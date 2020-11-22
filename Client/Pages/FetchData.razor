@@ -39,7 +39,7 @@
         _forecasts = (await _http.GetFromJsonAsync<WeatherForecast[]>("WeatherForecast")).ToList();
     }
 
-    bool FilterFunc(WeatherForecast element)
+    private bool FilterFunc(WeatherForecast element)
     {
         if (string.IsNullOrWhiteSpace(_searchString))
             return true;
