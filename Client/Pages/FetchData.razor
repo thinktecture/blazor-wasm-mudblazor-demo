@@ -2,7 +2,7 @@
 
 @using MudBlazorDemoWasm.Shared
 
-@inject HttpClient Http
+@inject HttpClient _http
 
 <MudTable Items="@_forecasts" Dense="false" Hover="true" Filter="new Func<WeatherForecast,bool>(FilterFunc)" @bind-SelectedItem="_selectedItem">
     <ToolBarContent>
